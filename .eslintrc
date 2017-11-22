@@ -1,0 +1,38 @@
+parser: babel-eslint
+
+parserOptions:
+  ecmaVersion: 8
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+
+rules:
+  eqeqeq:
+    - 1
+    - smart
+  indent:
+    - 1
+    - 2
+  quotes:
+    - 2
+    - single
+  linebreak-style:
+    - 2
+    - unix
+  semi:
+    - 2
+    - never
+
+env:
+  es6: true
+  commonjs: true
+  node: true
+  browser: true
+  mocha: true
+
+plugins:
+  - react
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
