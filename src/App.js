@@ -16,12 +16,13 @@ export default class App extends PureComponent {
     ])
   }
 
+  componentDidMount() {
+    this.state.products.log()
+  }
+
   render() {
     return (
       <CartExample {...this.state} />
     )
   }
-}
-
-App.propTypes = {
 }

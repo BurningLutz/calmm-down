@@ -3,11 +3,16 @@ import * as R from 'ramda'
 import * as U from 'karet.util'
 import * as L from 'partial.lenses'
 
+const countStyle = {
+  width: 35,
+  textAlign: 'center',
+  display: 'inline-block',
+}
 export function Counter({count}) {
   return (
     <span>
       <button onClick={() => count.modify(R.add(-1))}>-</button>
-      {count}
+      <span style={countStyle}>{count}</span>
       <button onClick={() => count.modify(R.add(+1))}>+</button>
     </span>
   )
