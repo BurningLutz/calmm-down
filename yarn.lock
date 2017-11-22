@@ -2763,6 +2763,19 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+karet.util@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/karet.util/-/karet.util-0.17.1.tgz#f307dfe9b7065a9f2faa2c48aeb3ad820b617b2e"
+  dependencies:
+    infestines "^0.4.5"
+    karet "^2.0.0"
+    kefir.atom "^5.3.0"
+    kefir.combines "^4.0.0"
+    partial.lenses "^13.0.0"
+    prop-types "^15.5.6"
+    ramda "^0.25.0"
+    react "^16.0.0"
+
 karet@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/karet/-/karet-2.0.0.tgz#e01af4628e9b6289820389ec049ee9c7c9e09d7c"
@@ -2770,12 +2783,18 @@ karet@^2.0.0:
     infestines "^0.4.4"
     react "^16.0.0"
 
-kefir.atom@^5.4.0:
+kefir.atom@^5.3.0, kefir.atom@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/kefir.atom/-/kefir.atom-5.4.0.tgz#45897b339afd3081b7f0aca12e329426a8314680"
   dependencies:
     infestines "^0.4.4"
     partial.lenses ">=2.2.0"
+
+kefir.combines@^4.0.0:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/kefir.combines/-/kefir.combines-4.1.5.tgz#d051aac799349ac9148fcdc2db656a45793b7e13"
+  dependencies:
+    infestines "^0.4.4"
 
 kefir@^3.8.0:
   version "3.8.0"
@@ -3414,7 +3433,7 @@ parseurl@~1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.1.tgz#c8ab8c9223ba34888aa64a297b28853bec18da56"
 
-partial.lenses@>=2.2.0:
+partial.lenses@>=2.2.0, partial.lenses@^13.0.0, partial.lenses@^13.1.0:
   version "13.1.0"
   resolved "https://registry.yarnpkg.com/partial.lenses/-/partial.lenses-13.1.0.tgz#ff0787f3146efb28f331ace8e3e84578f0701631"
   dependencies:
@@ -3828,7 +3847,7 @@ prop-types@^15.5.10:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
 
-prop-types@^15.6.0:
+prop-types@^15.5.6, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:

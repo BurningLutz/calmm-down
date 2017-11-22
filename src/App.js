@@ -2,22 +2,23 @@ import React, { PureComponent } from 'react'
 import Atom from 'kefir.atom'
 
 import loadable from './common/loadable'
-const Counter = loadable(() => import(/* webpackChunkName: "Counter" */ './components/Counter'))
+const CartExample = loadable(() => import(/* webpackChunkName: "CartExample" */ './components/CartExample'))
 
 export default class App extends PureComponent {
   state = {
-    count0: Atom(0),
-    count1: Atom(0),
+    products: Atom([
+      {id: 1, name: 'Sinertävä lenkki 500g'},
+      {id: 2, name: 'Maksainen laatikko 400g'},
+      {id: 3, name: 'Maitoa etäisesti muistuttava juoma 0.9l'},
+      {id: 4, name: 'Festi moka kaffe 500g'},
+      {id: 5, name: 'Niin hyvä voffeli ettei saa 55g'},
+      {id: 6, name: 'Suklainen Japanilainen viihdyttäjä 37g'}
+    ])
   }
 
   render() {
-    const { count0, count1 } = this.state
-
     return (
-      <div>
-        <Counter count={count0} />
-        <Counter count={count1} />
-      </div>
+      <CartExample {...this.state} />
     )
   }
 }
