@@ -22,6 +22,8 @@ rules:
   semi:
     - 2
     - never
+  react/prop-types:
+    - 0
 
 env:
   es6: true

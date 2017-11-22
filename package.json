@@ -27,8 +27,12 @@
   "homepage": "https://github.com/BurningLutz/wereb-packt#readme",
   "dependencies": {
     "core-js": "^2.5.0",
+    "karet": "^2.0.0",
+    "kefir": "^3.8.0",
+    "kefir.atom": "^5.4.0",
     "normalize.css": "^7.0.0",
     "prop-types": "^15.5.10",
+    "ramda": "^0.25.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.5",

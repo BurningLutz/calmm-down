@@ -31,6 +31,10 @@ const configs = {
         'react',
         'react-dom',
         'react-loadable',
+        'karet',
+        'kefir',
+        'kefir.atom',
+        'ramda',
       ]
     },
     output: {
