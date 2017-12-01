@@ -24,6 +24,8 @@ rules:
     - never
   react/prop-types:
     - 0
+  react/display-name:
+    - 0
 
 env:
   es6: true
