@@ -10,20 +10,23 @@ import * as R from 'ramda'
 window.R = R
 
 import loadable from './common/loadable'
-const Counters = loadable(() => import(/* webpackChunkName: "Counters" */ './components/Counters'))
+const Board = loadable(() => import(/* webpackChunkName: "Board" */ './components/Board'))
 
 export default class App extends PureComponent {
   state = {
-    counters: Atom([])
+    game: U.atom({
+      squares: new Array(9),
+      isXNext: true
+    })
   }
 
   componentDidMount() {
-    this.state.counters.log('current counters')
+    this.state.game.log('game')
   }
 
   render() {
     return (
-      <Counters {...this.state} />
+      <Board {...this.state} />
     )
   }
 }

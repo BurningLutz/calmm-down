@@ -1,5 +1,6 @@
 import * as React from 'karet'
 import * as R from 'ramda'
+import * as U from 'karet.util'
 
 export function Counter({count}) {
   return (
@@ -21,11 +22,11 @@ export function Add({counters}) {
 export default ({counters}) => {
   return (
     <div>
-      {counters.view(R.addIndex(R.map)((_, i) => <Counter key={i} count={counters.view(i)} />))}
+      {U.mapElems((count, i) => <Counter key={i} count={count} />, counters)}
       <div>
         <Add counters={counters} />
       </div>
-      <div>{counters.view(R.sum)}</div>
+      <div>{U.view(R.sum, counters)}</div>
     </div>
   )
 }
