@@ -41,7 +41,7 @@ const configs = {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[chunkhash:8].js',
       chunkFilename: '[name].[chunkhash:8].js',
-      publicPath: '/'
+      publicPath: 'https://burninglutz.github.io/calmm-down/'
     },
     resolve: {
       modules: ['./src', './public', 'node_modules']
