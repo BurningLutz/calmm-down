@@ -1,32 +1,31 @@
-import React, { PureComponent } from 'react'
-import Atom from 'kefir.atom'
-
-window.Atom = Atom
-import * as L from 'partial.lenses'
-window.L = L
+import * as React from 'karet'
 import * as U from 'karet.util'
-window.U = U
 import * as R from 'ramda'
-window.R = R
+import * as L from 'partial.lenses'
 
-import loadable from './common/loadable'
-const Board = loadable(() => import(/* webpackChunkName: "Board" */ './components/Board'))
+import InputPlayer from './components/InputPlayer.js'
+import Versus from './components/Versus.js'
 
-export default class App extends PureComponent {
-  state = {
-    game: U.atom({
-      squares: new Array(9),
-      isXNext: true
-    })
-  }
+export default function App() {
+  const state = U.atom({
+    player1: { name: '' },
+    player2: { name: '' },
+  })
 
-  componentDidMount() {
-    this.state.game.log('game')
-  }
+  const player1Name = state.view(['player1', 'name'])
+  const player2Name = state.view(['player2', 'name'])
 
-  render() {
-    return (
-      <Board {...this.state} />
-    )
-  }
+  const shouldShowVersus = state.view(L.reread(x => {
+    return !R.isEmpty(x.player1.name) && !R.isEmpty(x.player2.name)
+  }))
+
+  return (
+    <div className="flex-col main">
+      <InputPlayer placeholder="player 1" name={player1Name} />
+      <InputPlayer placeholder="player 2" name={player2Name} />
+      { U.ift(shouldShowVersus,
+        <Versus className="versus" p1={player1Name} p2={player2Name} />
+      )}
+    </div>
+  )
 }

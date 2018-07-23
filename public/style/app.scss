@@ -1,1 +1,31 @@
-@import "./vars";
+:global {
+  .main {
+    width: 250px;
+    margin: auto;
+    margin-top: 250px;
+  }
+
+  .versus {
+    margin-top: 10px;
+  }
+
+  .ta-right {
+    text-align: right;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex-col {
+    @extend .flex;
+    flex-direction: column;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+  .align-center {
+    align-items: center;
+  }
+}
